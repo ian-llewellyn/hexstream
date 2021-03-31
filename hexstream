@@ -1,0 +1,15 @@
+#!/bin/python
+# -*- coding: utf-8 -*-
+
+import sys
+
+def main():
+    while not sys.stdin.closed:
+        ch = sys.stdin.read(1)
+        print('%x(%s) ' % (ord(ch), ch), end='')
+        if ch == '\n':
+            print('')
+        sys.stdout.flush()
+
+if __name__ == '__main__':
+    main()
